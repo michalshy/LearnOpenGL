@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LessonShaders.cpp" />
     <ClCompile Include="src\lessons\LessonTextures.cpp" />
     <ClCompile Include="src\shader\Shader.cpp" />
     <ClCompile Include="src\main.cpp" />
