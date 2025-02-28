@@ -72,19 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LessonTransformation.cpp" />
     <ClCompile Include="src\lessons\LessonShaders.cpp" />
     <ClCompile Include="src\lessons\LessonTextures.cpp" />
     <ClCompile Include="src\shader\Shader.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="include\shader\Shader.h" />
     <ClInclude Include="include\lessons\LessonShaders.hpp" />
     <ClInclude Include="include\lessons\LessonTextures.hpp" />
+    <ClInclude Include="include\lessons\LessonTransformation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
@@ -169,6 +171,8 @@
     <None Include="shaders\sh2.frag" />
     <None Include="shaders\shTex.frag" />
     <None Include="shaders\shTex.vert" />
+    <None Include="shaders\transform\sh.frag" />
+    <None Include="shaders\transform\sh.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\awesomeface.png" />

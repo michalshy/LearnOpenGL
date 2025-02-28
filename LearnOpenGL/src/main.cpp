@@ -4,6 +4,7 @@
 #include "shader/Shader.h"
 #include "LessonShaders.hpp"
 #include "LessonTextures.hpp"
+#include "LessonTransformation.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -45,9 +46,11 @@ int main()
 
 	// LESSONS
 	//LessonShaders lSh;
-	LessonTextures lTex(window);
+	//LessonTextures lTex(window);
+	LessonTransformation lTrans;
+	lTrans.init();
 	//lSh.init();
-	lTex.init();
+	//lTex.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -57,7 +60,8 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		//lSh.run();
-		lTex.run();
+		//lTex.run();
+		lTrans.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

@@ -33,6 +33,9 @@
     <ClCompile Include="third_party\image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lessons\LessonTransformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h">
@@ -56,6 +59,9 @@
     <ClInclude Include="include\image\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\lessons\LessonTransformation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
@@ -63,6 +69,8 @@
     <None Include="shaders\sh2.frag" />
     <None Include="shaders\shTex.vert" />
     <None Include="shaders\shTex.frag" />
+    <None Include="shaders\transform\sh.vert" />
+    <None Include="shaders\transform\sh.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\wall.jpg">
