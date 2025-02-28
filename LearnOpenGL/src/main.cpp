@@ -45,7 +45,7 @@ int main()
 
 	// LESSONS
 	//LessonShaders lSh;
-	LessonTextures lTex;
+	LessonTextures lTex(window);
 	//lSh.init();
 	lTex.init();
 
