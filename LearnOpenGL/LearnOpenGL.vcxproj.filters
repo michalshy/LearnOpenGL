@@ -30,6 +30,9 @@
     <ClCompile Include="src\lessons\LessonShaders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="third_party\image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h">
@@ -50,10 +53,26 @@
     <ClInclude Include="include\lessons\LessonTextures.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\image\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
     <None Include="shaders\sh.vert" />
     <None Include="shaders\sh2.frag" />
+    <None Include="shaders\shTex.vert" />
+    <None Include="shaders\shTex.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tex\wall.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="tex\container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="tex\awesomeface.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

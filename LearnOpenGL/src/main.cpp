@@ -2,7 +2,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include "shader/Shader.h"
-#include "lessons/LessonShaders.hpp"
+#include "LessonShaders.hpp"
+#include "LessonTextures.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -42,18 +43,21 @@ int main()
 	glViewport(0, 0, 800, 600);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);	
 
-	LessonShaders lSh;
-	//Lesson Shaders
-	lSh.init();
+	// LESSONS
+	//LessonShaders lSh;
+	LessonTextures lTex;
+	//lSh.init();
+	lTex.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
 
-		glClearColor(0.f, 1.f, 0.f, 1.f);
+		glClearColor(0.f, 0.2f, 0.f, 1.f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		lSh.run();
+		//lSh.run();
+		lTex.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

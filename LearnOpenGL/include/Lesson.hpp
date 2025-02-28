@@ -1,6 +1,9 @@
 #ifndef LESSON_H
 #define LESSON_H
-
+#include <glad/glad.h> 
+#include <GLFW/glfw3.h>
+#include <iostream>
+#include "shader/Shader.h"
 class Lesson {
 public:
 	virtual void init() = 0;

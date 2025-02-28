@@ -1,9 +1,6 @@
 #ifndef LESSONHADER_HPP
 #define LESSONHADER_HPP
-#include <glad/glad.h> 
-#include <GLFW/glfw3.h>
-#include <iostream>
-#include "shader/Shader.h"
+
 #include "Lesson.hpp"
 
 class LessonShaders : Lesson{
