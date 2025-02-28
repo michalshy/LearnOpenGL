@@ -72,19 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\shader;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\shader;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\shader;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\shader;third_party;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LessonTextures.cpp" />
     <ClCompile Include="src\shader\Shader.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="third_party\glad.c" />
@@ -154,7 +155,10 @@
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h" />
     <ClInclude Include="include\KHR\khrplatform.h" />
+    <ClInclude Include="include\Lesson.hpp" />
     <ClInclude Include="include\shader\Shader.h" />
+    <ClInclude Include="include\lessons\LessonShaders.hpp" />
+    <ClInclude Include="include\lessons\LessonTextures.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
