@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LessonCoords.cpp" />
     <ClCompile Include="src\lessons\LessonTransformation.cpp" />
     <ClCompile Include="src\lessons\LessonShaders.cpp" />
     <ClCompile Include="src\lessons\LessonTextures.cpp" />
@@ -164,8 +165,11 @@
     <ClInclude Include="include\lessons\LessonShaders.hpp" />
     <ClInclude Include="include\lessons\LessonTextures.hpp" />
     <ClInclude Include="include\lessons\LessonTransformation.hpp" />
+    <ClInclude Include="include\lessons\LessonCoords.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shaders\cords\sh.frag" />
+    <None Include="shaders\cords\sh.vert" />
     <None Include="shaders\sh1.frag" />
     <None Include="shaders\sh.vert" />
     <None Include="shaders\sh2.frag" />
