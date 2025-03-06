@@ -6,6 +6,7 @@
 #include "LessonTextures.hpp"
 #include "LessonTransformation.hpp"
 #include "LessonCoords.hpp"
+#include "LessonCamera.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -49,11 +50,13 @@ int main()
 	//LessonShaders lSh;
 	//LessonTextures lTex(window);
 	//LessonTransformation lTrans;
-	LessonCoords lCoords;
+	//LessonCoords lCoords;
+	LessonCamera lCam(window);
 	//lTrans.init();
 	//lSh.init();
 	//lTex.init();
-	lCoords.init();
+	//lCoords.init();
+	lCam.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -65,7 +68,8 @@ int main()
 		//lSh.run();
 		//lTex.run();
 		//lTrans.run();
-		lCoords.run();
+		//lCoords.run();
+		lCam.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
