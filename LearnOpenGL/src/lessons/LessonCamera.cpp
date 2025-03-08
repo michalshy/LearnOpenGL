@@ -32,7 +32,7 @@ static float pitch = 0.0f;
 
 static float fov = 45.0f;
 
-bool firstMouse = true;
+static bool firstMouse = true;
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
