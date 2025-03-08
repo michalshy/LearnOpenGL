@@ -17,7 +17,7 @@ static bool firstMouse = true;
 static float deltaTime = 0.f;
 static float lastFrame = 0.f;
 
-static glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+static glm::vec3 lightPos(1.2f, 0.f, 2.0f);
 
 void LightBasic::init()
 {
@@ -122,6 +122,7 @@ void LightBasic::run()
 	lighting.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 	lighting.setVec3("lightColor", 1.0f, 1.f, 1.f);
 	lighting.setVec3("lightPos", lightPos);
+	lighting.setVec3("viewPos", cam.Position);
 
 	glm::mat4 projection = glm::perspective(glm::radians(cam.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.f);
 	glm::mat4 view = cam.GetViewMatrix();
@@ -138,6 +139,10 @@ void LightBasic::run()
 	lightSource.use();
 	lightSource.setMat4("projection", projection);
 	lightSource.setMat4("view", view);
+
+	//lightPos.r = 1.5f * glm::cos(glfwGetTime());
+	//lightPos.b = 1.5f * glm::sin(glfwGetTime());
+	//lightPos.g = 1.f;
 
 	model = glm::mat4(1.0f);
 	model = glm::translate(model, lightPos);
