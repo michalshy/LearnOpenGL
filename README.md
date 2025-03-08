@@ -16,4 +16,7 @@
 ![Lesson 5](Results/l5.png)
 
 ## Colors
-![Lesson 5](Results/l6.png)
+![Lesson 6](Results/l6.png)
+
+## Colors
+![Lesson 7](Results/l7.png)
