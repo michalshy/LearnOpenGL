@@ -8,6 +8,7 @@
 #include "LessonCoords.hpp"
 #include "LessonCamera.hpp"
 #include "LightColor.hpp"
+#include "LightBasic.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -59,15 +60,16 @@ int main()
 	//lCoords.init();
 	//lCam.init();
 
-	LightColor lC(window);
-	lC.init();
-
+	//LightColor lC(window);
+	//lC.init();
+	LightBasic lB(window);
+	lB.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
 
-		glClearColor(0.f, 0.2f, 0.f, 1.f);
+		glClearColor(0.1f, 0.1f, 0.1f, 1.f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//lSh.run();
@@ -76,7 +78,8 @@ int main()
 		//lCoords.run();
 		//lCam.run();
 
-		lC.run();
+		//lC.run();
+		lB.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

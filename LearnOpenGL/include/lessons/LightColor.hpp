@@ -14,7 +14,7 @@ class LightColor :
 public:
 	LightColor(GLFWwindow* _window) :
 		lighting("shaders\\light\\color\\sh.vert", "shaders\\light\\color\\sh.frag"),
-		lightSource("shaders\\light\\color\\sh.vert", "shaders\\light\\color\\shLight.frag"),
+		lightSource("shaders\\light\\color\\shLight.vert", "shaders\\light\\color\\shLight.frag"),
 		VAO(0),
 		VBO(0),
 		lightVAO(0),
