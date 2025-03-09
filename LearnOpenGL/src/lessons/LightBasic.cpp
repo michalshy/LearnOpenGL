@@ -124,12 +124,16 @@ void LightBasic::run()
 	lighting.setVec3("lightPos", lightPos);
 	lighting.setVec3("viewPos", cam.Position);
 
+	//setting up camera
 	glm::mat4 projection = glm::perspective(glm::radians(cam.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.f);
 	glm::mat4 view = cam.GetViewMatrix();
 	lighting.setMat4("projection", projection);
 	lighting.setMat4("view", view);
 
+	//rotation and translation
 	glm::mat4 model = glm::mat4(1.f);
+	model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, 1.f, 0.0f));
+
 	lighting.setMat4("model", model);
 
 	glBindVertexArray(VAO);
