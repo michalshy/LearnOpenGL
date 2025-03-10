@@ -14,7 +14,7 @@ class LightBasic :
 public:
 	LightBasic(GLFWwindow* _window) :
 		lighting("shaders\\light\\basic\\sh.vert", "shaders\\light\\basic\\sh.frag"),
-		lightSource("shaders\\light\\basic\\sh.vert", "shaders\\light\\basic\\shLight.frag"),
+		lightSource("shaders\\light\\basic\\shLight.vert", "shaders\\light\\basic\\shLight.frag"),
 		VAO(0),
 		VBO(0),
 		lightVAO(0),

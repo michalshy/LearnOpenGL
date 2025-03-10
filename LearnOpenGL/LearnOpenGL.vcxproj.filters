@@ -48,6 +48,9 @@
     <ClCompile Include="src\lessons\LightBasic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lessons\LightMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h">
@@ -89,6 +92,9 @@
     <ClInclude Include="include\lessons\LightBasic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\lessons\LightMaterial.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
@@ -107,6 +113,10 @@
     <None Include="shaders\light\basic\sh.vert" />
     <None Include="shaders\light\basic\shLight.frag" />
     <None Include="shaders\light\basic\shLight.vert" />
+    <None Include="shaders\light\materials\shLight.vert" />
+    <None Include="shaders\light\materials\sh.frag" />
+    <None Include="shaders\light\materials\sh.vert" />
+    <None Include="shaders\light\materials\shLight.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\wall.jpg">

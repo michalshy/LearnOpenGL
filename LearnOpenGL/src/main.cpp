@@ -9,6 +9,7 @@
 #include "LessonCamera.hpp"
 #include "LightColor.hpp"
 #include "LightBasic.hpp"
+#include "LightMaterial.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -62,8 +63,10 @@ int main()
 
 	//LightColor lC(window);
 	//lC.init();
-	LightBasic lB(window);
-	lB.init();
+	//LightBasic lB(window);
+	//lB.init();
+	LightMaterial lm(window);
+	lm.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -79,7 +82,8 @@ int main()
 		//lCam.run();
 
 		//lC.run();
-		lB.run();
+		//lB.run();
+		lm.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
