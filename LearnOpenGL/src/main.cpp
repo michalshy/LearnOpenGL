@@ -10,6 +10,7 @@
 #include "LightColor.hpp"
 #include "LightBasic.hpp"
 #include "LightMaterial.hpp"
+#include "LightLightingMaps.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -65,8 +66,10 @@ int main()
 	//lC.init();
 	//LightBasic lB(window);
 	//lB.init();
-	LightMaterial lm(window);
-	lm.init();
+	//LightMaterial lm(window);
+	//lm.init();
+	LightLightingMaps lMm(window);
+	lMm.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -83,7 +86,8 @@ int main()
 
 		//lC.run();
 		//lB.run();
-		lm.run();
+		//lm.run();
+		lMm.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

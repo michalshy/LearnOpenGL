@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LightLightingMaps.cpp" />
     <ClCompile Include="src\lessons\LightMaterial.cpp" />
     <ClCompile Include="src\lessons\LightBasic.cpp" />
     <ClCompile Include="src\lessons\LightColor.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="include\lessons\LightColor.hpp" />
     <ClInclude Include="include\lessons\LightBasic.hpp" />
     <ClInclude Include="include\lessons\LightMaterial.hpp" />
+    <ClInclude Include="include\lessons\LightLightingMaps.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\light\basic\sh.frag" />
@@ -186,6 +188,10 @@
     <None Include="shaders\light\color\shLight.frag" />
     <None Include="shaders\cords\sh.frag" />
     <None Include="shaders\cords\sh.vert" />
+    <None Include="shaders\light\lightingmaps\sh.frag" />
+    <None Include="shaders\light\lightingmaps\sh.vert" />
+    <None Include="shaders\light\lightingmaps\shLight.frag" />
+    <None Include="shaders\light\lightingmaps\shLight.vert" />
     <None Include="shaders\light\materials\sh.frag" />
     <None Include="shaders\light\materials\sh.vert" />
     <None Include="shaders\light\materials\shLight.frag" />
@@ -201,6 +207,7 @@
   <ItemGroup>
     <Image Include="tex\awesomeface.png" />
     <Image Include="tex\container.jpg" />
+    <Image Include="tex\container2.png" />
     <Image Include="tex\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
