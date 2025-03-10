@@ -18,5 +18,8 @@
 ## Colors
 ![Lesson 6](Results/l6.png)
 
-## Colors
+## Basic Lighting
 ![Lesson 7](Results/l7.png)
+
+## Materials
+![Lesson 8](Results/l8.png)
