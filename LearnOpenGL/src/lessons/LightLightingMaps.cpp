@@ -22,6 +22,8 @@ static glm::vec3 lightPos(1.2f, 1.f, 2.0f);
 void LightLightingMaps::init()
 {
 	tex = load_texture("tex\\container2.png");
+	texSpec = load_texture("tex\\container2_specular.png");
+	texEmission = load_texture("tex\\matrix.jpg");
 
 	float vertices[] = {
 		// positions          // normals           // texture coords
@@ -101,9 +103,10 @@ void LightLightingMaps::init()
 
 	//attach texture
 	lighting.setInt("material.diffuse", 0);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, tex);
+	lighting.setInt("material.specular", 1);
+	lighting.setInt("material.emission", 2);
 	
+
 	//glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, 0.1f, 100.0f); - ortographic projection matrix
 	//glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)height, 0.1f, 100.0f); - perspective projection matrix
 
@@ -128,7 +131,6 @@ void LightLightingMaps::run()
 	lighting.use();
 
 	// material properties
-	lighting.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
 	lighting.setFloat("material.shininess", 64.0f);
 
 	lighting.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
@@ -147,6 +149,13 @@ void LightLightingMaps::run()
 	//rotation and translation
 	glm::mat4 model = glm::mat4(1.f);
 	lighting.setMat4("model", model);
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, tex);
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, texSpec);
+	glActiveTexture(GL_TEXTURE2);
+	glBindTexture(GL_TEXTURE_2D, texEmission);
 
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -174,7 +183,7 @@ unsigned int LightLightingMaps::load_texture(char const * path)
 
 	int width, height, nrChannels;
 	unsigned char* data;
-	data = stbi_load("tex\\container2.png", &width, &height, &nrChannels, 0);
+	data = stbi_load(path, &width, &height, &nrChannels, 0);
 	if (data)
 	{
 		GLenum format;

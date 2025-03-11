@@ -7,7 +7,7 @@ class LightLightingMaps : public Lesson
 {
 	Shader lighting;
 	Shader lightSource;
-	unsigned int VAO, VBO, lightVAO, tex;
+	unsigned int VAO, VBO, lightVAO, tex, texSpec, texEmission;
 	GLFWwindow* window;
 
 public:
@@ -18,6 +18,8 @@ public:
 		VBO(0),
 		lightVAO(0),
 		tex(0),
+		texSpec(0),
+		texEmission(0),
 		window(_window)
 	{}
 	void init();

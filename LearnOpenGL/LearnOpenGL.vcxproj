@@ -208,6 +208,8 @@
     <Image Include="tex\awesomeface.png" />
     <Image Include="tex\container.jpg" />
     <Image Include="tex\container2.png" />
+    <Image Include="tex\container2_specular.png" />
+    <Image Include="tex\matrix.jpg" />
     <Image Include="tex\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

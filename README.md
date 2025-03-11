@@ -23,3 +23,6 @@
 
 ## Materials
 ![Lesson 8](Results/l8.png)
+
+## Lighting maps
+![Lesson 9](Results/l9.png)

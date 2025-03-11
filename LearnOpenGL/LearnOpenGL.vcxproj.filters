@@ -141,5 +141,11 @@
     <Image Include="tex\container2.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="tex\container2_specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="tex\matrix.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
