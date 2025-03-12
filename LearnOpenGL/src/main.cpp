@@ -11,6 +11,7 @@
 #include "LightBasic.hpp"
 #include "LightMaterial.hpp"
 #include "LightLightingMaps.hpp"
+#include "LightCasters.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -68,8 +69,10 @@ int main()
 	//lB.init();
 	//LightMaterial lm(window);
 	//lm.init();
-	LightLightingMaps lMm(window);
-	lMm.init();
+	//LightLightingMaps lMm(window);
+	//lMm.init();
+	LightCasters lCast(window);
+	lCast.init();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -87,7 +90,8 @@ int main()
 		//lC.run();
 		//lB.run();
 		//lm.run();
-		lMm.run();
+		//lMm.run();
+		lCast.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

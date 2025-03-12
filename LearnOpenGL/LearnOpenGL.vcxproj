@@ -75,8 +75,8 @@
     <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;include\camera;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;include\camera;third_party;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include\shader;include\lessons;include\KHR;include\image;include\glad;include\camera;include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lessons\LightCasters.cpp" />
     <ClCompile Include="src\lessons\LightLightingMaps.cpp" />
     <ClCompile Include="src\lessons\LightMaterial.cpp" />
     <ClCompile Include="src\lessons\LightBasic.cpp" />
@@ -177,12 +178,17 @@
     <ClInclude Include="include\lessons\LightBasic.hpp" />
     <ClInclude Include="include\lessons\LightMaterial.hpp" />
     <ClInclude Include="include\lessons\LightLightingMaps.hpp" />
+    <ClInclude Include="include\lessons\LightCasters.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\light\basic\sh.frag" />
     <None Include="shaders\light\basic\sh.vert" />
     <None Include="shaders\light\basic\shLight.frag" />
     <None Include="shaders\light\basic\shLight.vert" />
+    <None Include="shaders\light\casters\sh.frag" />
+    <None Include="shaders\light\casters\sh.vert" />
+    <None Include="shaders\light\casters\shLight.frag" />
+    <None Include="shaders\light\casters\shLight.vert" />
     <None Include="shaders\light\color\sh.frag" />
     <None Include="shaders\light\color\sh.vert" />
     <None Include="shaders\light\color\shLight.frag" />

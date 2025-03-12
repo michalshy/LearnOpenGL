@@ -54,6 +54,9 @@
     <ClCompile Include="src\lessons\LightLightingMaps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lessons\LightCasters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h">
@@ -101,6 +104,9 @@
     <ClInclude Include="include\lessons\LightLightingMaps.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\lessons\LightCasters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
@@ -127,6 +133,10 @@
     <None Include="shaders\light\lightingmaps\sh.vert" />
     <None Include="shaders\light\lightingmaps\shLight.frag" />
     <None Include="shaders\light\lightingmaps\shLight.vert" />
+    <None Include="shaders\light\casters\sh.frag" />
+    <None Include="shaders\light\casters\sh.vert" />
+    <None Include="shaders\light\casters\shLight.frag" />
+    <None Include="shaders\light\casters\shLight.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\wall.jpg">
