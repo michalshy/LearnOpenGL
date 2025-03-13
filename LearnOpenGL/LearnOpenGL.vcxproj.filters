@@ -133,10 +133,18 @@
     <None Include="shaders\light\lightingmaps\sh.vert" />
     <None Include="shaders\light\lightingmaps\shLight.frag" />
     <None Include="shaders\light\lightingmaps\shLight.vert" />
-    <None Include="shaders\light\casters\sh.frag" />
-    <None Include="shaders\light\casters\sh.vert" />
-    <None Include="shaders\light\casters\shLight.frag" />
-    <None Include="shaders\light\casters\shLight.vert" />
+    <None Include="shaders\light\casters\directional\sh.frag" />
+    <None Include="shaders\light\casters\directional\sh.vert" />
+    <None Include="shaders\light\casters\directional\shLight.frag" />
+    <None Include="shaders\light\casters\directional\shLight.vert" />
+    <None Include="shaders\light\casters\point\sh.frag" />
+    <None Include="shaders\light\casters\point\sh.vert" />
+    <None Include="shaders\light\casters\point\shLight.frag" />
+    <None Include="shaders\light\casters\point\shLight.vert" />
+    <None Include="shaders\light\casters\spot\sh.frag" />
+    <None Include="shaders\light\casters\spot\sh.vert" />
+    <None Include="shaders\light\casters\spot\shLight.frag" />
+    <None Include="shaders\light\casters\spot\shLight.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\wall.jpg">

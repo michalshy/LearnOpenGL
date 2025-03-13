@@ -26,3 +26,6 @@
 
 ## Lighting maps
 ![Lesson 9](Results/l9.png)
+
+## Light casters
+![Lesson 10](Results/l10.png)

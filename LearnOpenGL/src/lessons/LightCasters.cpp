@@ -113,13 +113,14 @@ void LightCasters::init()
 	glBindVertexArray(0);
 
 	lighting.use();
-	lighting.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
 
 	//attach texture
 	lighting.setInt("material.diffuse", 0);
 	lighting.setInt("material.specular", 1);
 	lighting.setInt("material.emission", 2);
-	lighting.setVec3("light.direction", -0.2f, -1.f, -0.3f);
+
+	//directional
+	//lighting.setVec3("light.direction", -0.2f, -1.f, -0.3f);
 
 	//glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, 0.1f, 100.0f); - ortographic projection matrix
 	//glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)height, 0.1f, 100.0f); - perspective projection matrix
@@ -145,13 +146,25 @@ void LightCasters::run()
 	lighting.use();
 
 	// material properties
-	lighting.setFloat("material.shininess", 64.0f);
 
-	lighting.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-	lighting.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f); // darken diffuse light a bit
+	// point
+	//lighting.setVec3("light.position", lightPos);
+	lighting.setVec3("light.position", cam.Position);
+	lighting.setVec3("light.direction", cam.Front);
+	lighting.setFloat("light.cutOff", glm::cos(glm::radians(12.5f)));
+	lighting.setFloat("light.outerCutOff", glm::cos(glm::radians(20.f)));
+	lighting.setVec3("viewPos", cam.Position);
+
+	lighting.setVec3("light.ambient", 0.1f, 0.1f, 0.1f);
+	lighting.setVec3("light.diffuse", 0.8f, 0.8f, 0.8f); // darken diffuse light a bit
 	lighting.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
-	lighting.setVec3("viewPos", cam.Position);
+	//for point light
+	lighting.setFloat("light.constant", 1.0f);
+	lighting.setFloat("light.linear", 0.09f);
+	lighting.setFloat("light.quadratic", 0.032f);
+
+	lighting.setFloat("material.shininess", 32.0f);
 
 	//setting up camera
 	glm::mat4 projection = glm::perspective(glm::radians(cam.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.f);
@@ -181,17 +194,20 @@ void LightCasters::run()
 	}
 
 	//draw light
-	lightSource.use();
-	lightSource.setMat4("projection", projection);
-	lightSource.setMat4("view", view);
+	//lightSource.use();
+	//lightSource.setMat4("projection", projection);
+	//lightSource.setMat4("view", view);
 
-	model = glm::mat4(1.0f);
-	model = glm::translate(model, lightPos);
-	model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
-	lightSource.setMat4("model", model);
+	//lightPos.r = sin(glfwGetTime());
+	//lightPos.b = cos(glfwGetTime());
 
-	/*glBindVertexArray(lightVAO);
-	glDrawArrays(GL_TRIANGLES, 0, 36);*/
+	//model = glm::mat4(1.0f);
+	//model = glm::translate(model, lightPos );
+	//model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+	//lightSource.setMat4("model", model);
+
+	//glBindVertexArray(lightVAO);
+	//glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	glBindVertexArray(0);
 }

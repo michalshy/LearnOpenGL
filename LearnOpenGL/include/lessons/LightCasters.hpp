@@ -10,9 +10,10 @@ class LightCasters :
 	unsigned int VAO, VBO, lightVAO, tex, texSpec, texEmission;
 	GLFWwindow* window;
 public:
-	LightCasters(GLFWwindow* _window) :
-		lighting("shaders\\light\\casters\\sh.vert", "shaders\\light\\casters\\sh.frag"),
-		lightSource("shaders\\light\\casters\\shLight.vert", "shaders\\light\\casters\\shLight.frag"),
+	//directional
+	/*LightCasters(GLFWwindow* _window) :
+		lighting("shaders\\light\\casters\\directional\\sh.vert", "shaders\\light\\casters\\directional\\sh.frag"),
+		lightSource("shaders\\light\\casters\\directional\\shLight.vert", "shaders\\light\\casters\\directional\\shLight.frag"),
 		VAO(0),
 		VBO(0),
 		lightVAO(0),
@@ -20,7 +21,32 @@ public:
 		texSpec(0),
 		texEmission(0),
 		window(_window)
-	{}
+	{}*/
+
+	//point
+	/*LightCasters(GLFWwindow* _window) :
+		lighting("shaders\\light\\casters\\point\\sh.vert", "shaders\\light\\casters\\point\\sh.frag"),
+		lightSource("shaders\\light\\casters\\point\\shLight.vert", "shaders\\light\\casters\\point\\shLight.frag"),
+		VAO(0),
+		VBO(0),
+		lightVAO(0),
+		tex(0),
+		texSpec(0),
+		texEmission(0),
+		window(_window)
+	{}*/
+	LightCasters(GLFWwindow* _window) :
+		lighting("shaders\\light\\casters\\spot\\sh.vert", "shaders\\light\\casters\\spot\\sh.frag"),
+		lightSource("shaders\\light\\casters\\spot\\shLight.vert", "shaders\\light\\casters\\spot\\shLight.frag"),
+		VAO(0),
+		VBO(0),
+		lightVAO(0),
+		tex(0),
+		texSpec(0),
+		texEmission(0),
+		window(_window)
+	{
+	}
 	void init();
 	void run();
 protected:
