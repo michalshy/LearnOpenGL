@@ -11,8 +11,8 @@ class LightCasters :
 	GLFWwindow* window;
 public:
 	LightCasters(GLFWwindow* _window) :
-		lighting("shaders\\light\\lightingmaps\\sh.vert", "shaders\\light\\lightingmaps\\sh.frag"),
-		lightSource("shaders\\light\\lightingmaps\\shLight.vert", "shaders\\light\\lightingmaps\\shLight.frag"),
+		lighting("shaders\\light\\casters\\sh.vert", "shaders\\light\\casters\\sh.frag"),
+		lightSource("shaders\\light\\casters\\shLight.vert", "shaders\\light\\casters\\shLight.frag"),
 		VAO(0),
 		VBO(0),
 		lightVAO(0),
