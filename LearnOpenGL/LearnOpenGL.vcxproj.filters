@@ -57,6 +57,9 @@
     <ClCompile Include="src\lessons\LightCasters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lessons\LightFinal\LightFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\glad.h">
@@ -107,6 +110,9 @@
     <ClInclude Include="include\lessons\LightCasters.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\lessons\LightFinal\LightFinal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sh1.frag" />
@@ -145,6 +151,10 @@
     <None Include="shaders\light\casters\spot\sh.vert" />
     <None Include="shaders\light\casters\spot\shLight.frag" />
     <None Include="shaders\light\casters\spot\shLight.vert" />
+    <None Include="shaders\light\final\sh.frag" />
+    <None Include="shaders\light\final\sh.vert" />
+    <None Include="shaders\light\final\shLight.frag" />
+    <None Include="shaders\light\final\shLight.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="tex\wall.jpg">
