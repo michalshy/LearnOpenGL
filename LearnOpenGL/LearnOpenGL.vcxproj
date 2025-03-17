@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -75,8 +75,8 @@
     <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1\;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include;include\lessons;include\shader;include\image;include\camera;third_party;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Dev\Libs\glm-1.0.1\glm-1.0.1;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include\shader;include\lessons;include\KHR;include\image;include\glad;include\camera;include\lessons\LightFinal;include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Soft\Assimp\lib\x64;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Soft\Assimp\include;C:\Dev\Libs\glm-1.0.1\glm-1.0.1;C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include;include\shader;include\lessons;include\KHR;include\image;include\glad;include\camera;include\lessons\LightFinal;deprecated\dep_include\lessons\LightFinal;deprecated\dep_include\lessons;deprecated\dep_include;deprecated;include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>C:\Dev\Libs\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\lib-vc2022;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
@@ -147,19 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\lessons\LightFinal\LightFinal.cpp" />
-    <ClCompile Include="src\lessons\LightCasters.cpp" />
-    <ClCompile Include="src\lessons\LightLightingMaps.cpp" />
-    <ClCompile Include="src\lessons\LightMaterial.cpp" />
-    <ClCompile Include="src\lessons\LightBasic.cpp" />
-    <ClCompile Include="src\lessons\LightColor.cpp" />
-    <ClCompile Include="src\lessons\LessonCamera.cpp" />
-    <ClCompile Include="src\lessons\LessonCoords.cpp" />
-    <ClCompile Include="src\lessons\LessonTransformation.cpp" />
-    <ClCompile Include="src\lessons\LessonShaders.cpp" />
-    <ClCompile Include="src\lessons\LessonTextures.cpp" />
-    <ClCompile Include="src\shader\Shader.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightFinal\LightFinal.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightCasters.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightLightingMaps.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightMaterial.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightBasic.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightColor.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonCamera.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonCoords.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonTransformation.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonShaders.cpp" />
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonTextures.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\shader\Shader.cpp" />
+    <ClCompile Include="deprecated\dep_src\main_dep.cpp" />
     <ClCompile Include="third_party\glad.c" />
     <ClCompile Include="third_party\image.cpp" />
   </ItemGroup>
@@ -168,19 +170,20 @@
     <ClInclude Include="include\glad\glad.h" />
     <ClInclude Include="include\image\stb_image.h" />
     <ClInclude Include="include\KHR\khrplatform.h" />
-    <ClInclude Include="include\Lesson.hpp" />
+    <ClInclude Include="deprecated\dep_include\Lesson.hpp" />
     <ClInclude Include="include\shader\Shader.h" />
-    <ClInclude Include="include\lessons\LessonShaders.hpp" />
-    <ClInclude Include="include\lessons\LessonTextures.hpp" />
-    <ClInclude Include="include\lessons\LessonTransformation.hpp" />
-    <ClInclude Include="include\lessons\LessonCoords.hpp" />
-    <ClInclude Include="include\lessons\LessonCamera.hpp" />
-    <ClInclude Include="include\lessons\LightColor.hpp" />
-    <ClInclude Include="include\lessons\LightBasic.hpp" />
-    <ClInclude Include="include\lessons\LightMaterial.hpp" />
-    <ClInclude Include="include\lessons\LightLightingMaps.hpp" />
-    <ClInclude Include="include\lessons\LightCasters.hpp" />
-    <ClInclude Include="include\lessons\LightFinal\LightFinal.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LessonShaders.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LessonTextures.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LessonTransformation.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LessonCoords.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LessonCamera.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightColor.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightBasic.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightMaterial.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightLightingMaps.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightCasters.hpp" />
+    <ClInclude Include="deprecated\dep_include\lessons\LightFinal\LightFinal.hpp" />
+    <ClInclude Include="Mesh.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\light\basic\sh.frag" />

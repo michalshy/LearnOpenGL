@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="deprecated\dep_src\main_dep.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="third_party\glad.c">
@@ -24,40 +24,43 @@
     <ClCompile Include="src\shader\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LessonTextures.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonTextures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LessonShaders.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonShaders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="third_party\image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LessonTransformation.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonTransformation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LessonCoords.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonCoords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LessonCamera.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Start\LessonCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightColor.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightColor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightBasic.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightBasic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightMaterial.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightMaterial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightLightingMaps.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightLightingMaps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightCasters.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightCasters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lessons\LightFinal\LightFinal.cpp">
+    <ClCompile Include="deprecated\dep_src\lessons\Light\LightFinal\LightFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,46 +74,46 @@
     <ClInclude Include="include\shader\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LessonShaders.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LessonShaders.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Lesson.hpp">
+    <ClInclude Include="deprecated\dep_include\Lesson.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LessonTextures.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LessonTextures.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\image\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LessonTransformation.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LessonTransformation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LessonCoords.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LessonCoords.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LessonCamera.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LessonCamera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\camera\Camera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightColor.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightColor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightBasic.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightBasic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightMaterial.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightMaterial.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightLightingMaps.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightLightingMaps.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightCasters.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightCasters.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lessons\LightFinal\LightFinal.hpp">
+    <ClInclude Include="deprecated\dep_include\lessons\LightFinal\LightFinal.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,17 +2,6 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include "shader/Shader.h"
-#include "LessonShaders.hpp"
-#include "LessonTextures.hpp"
-#include "LessonTransformation.hpp"
-#include "LessonCoords.hpp"
-#include "LessonCamera.hpp"
-#include "LightColor.hpp"
-#include "LightBasic.hpp"
-#include "LightMaterial.hpp"
-#include "LightLightingMaps.hpp"
-#include "LightCasters.hpp"
-#include "LightFinal.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -50,32 +39,7 @@ int main()
 	}
 
 	glViewport(0, 0, 800, 600);
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);	
-
-	// LESSONS
-	//LessonShaders lSh;
-	//LessonTextures lTex(window);
-	//LessonTransformation lTrans;
-	//LessonCoords lCoords;
-	//LessonCamera lCam(window);
-	//lTrans.init();
-	//lSh.init();
-	//lTex.init();
-	//lCoords.init();
-	//lCam.init();
-
-	//LightColor lC(window);
-	//lC.init();
-	//LightBasic lB(window);
-	//lB.init();
-	//LightMaterial lm(window);
-	//lm.init();
-	//LightLightingMaps lMm(window);
-	//lMm.init();
-	//LightCasters lCast(window);
-	//lCast.init();
-	LightFinal lightFinal(window);
-	lightFinal.init();
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -83,19 +47,6 @@ int main()
 
 		glClearColor(0.1f, 0.1f, 0.1f, 1.f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-		//lSh.run();
-		//lTex.run();
-		//lTrans.run();
-		//lCoords.run();
-		//lCam.run();
-
-		//lC.run();
-		//lB.run();
-		//lm.run();
-		//lMm.run();
-		//lCast.run();
-		lightFinal.run();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
